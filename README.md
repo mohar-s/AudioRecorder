@@ -2,4 +2,4 @@
 AudioRecorder
 
 this is Recoreder app.
-you can contact me on moharsinghindia65@gmail.com
+you can contact me for anything on moharsinghindia65@gmail.com
