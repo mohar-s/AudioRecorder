@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New RecordingVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="NewRecordingVC" customModule="AudioRecorderMoharSingh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOR-YJ-ZLU">
+                                <rect key="frame" x="0.0" y="59" width="393" height="459"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S47-z2-u76">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="459"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 5:40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-NH-bCi">
+                                        <rect key="frame" x="12" y="50" width="369" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="tVj-kj-y7h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QfU-NH-bCi" firstAttribute="top" secondItem="tOR-YJ-ZLU" secondAttribute="top" constant="50" id="Ly8-iR-OUg"/>
+                                    <constraint firstAttribute="trailing" secondItem="S47-z2-u76" secondAttribute="trailing" id="UP8-VE-TTm"/>
+                                    <constraint firstItem="S47-z2-u76" firstAttribute="top" secondItem="tOR-YJ-ZLU" secondAttribute="top" id="gIF-om-0Pu"/>
+                                    <constraint firstItem="S47-z2-u76" firstAttribute="leading" secondItem="tOR-YJ-ZLU" secondAttribute="leading" id="kpY-Tw-eD8"/>
+                                    <constraint firstItem="QfU-NH-bCi" firstAttribute="leading" secondItem="tOR-YJ-ZLU" secondAttribute="leading" constant="12" id="shU-CQ-Hld"/>
+                                    <constraint firstAttribute="bottom" secondItem="S47-z2-u76" secondAttribute="bottom" id="xbN-cv-eLN"/>
+                                    <constraint firstAttribute="trailing" secondItem="QfU-NH-bCi" secondAttribute="trailing" constant="12" id="zhf-f4-nrO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKf-qD-bSj">
+                                <rect key="frame" x="0.0" y="518" width="393" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju0-se-KfS">
+                                        <rect key="frame" x="147" y="85" width="100" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Start" image="mic.fill" catalog="system">
+                                            <color key="titleColor" systemColor="tintColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startPauseRecodingBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LH7-eJ-UcI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMI-og-aaC">
+                                        <rect key="frame" x="145" y="134" width="100" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Stop" image="stop.circle" catalog="system">
+                                            <color key="titleColor" systemColor="tintColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopRecodingBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7VN-Qd-sqZ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stay with mic for clear recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQr-Ra-eRI">
+                                        <rect key="frame" x="20" y="230" width="353" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MZH-PH-81O"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ciq-Sv-3gO"/>
+                                    <constraint firstItem="FQr-Ra-eRI" firstAttribute="leading" secondItem="pKf-qD-bSj" secondAttribute="leading" constant="20" id="Qwp-aZ-fer"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQr-Ra-eRI" secondAttribute="trailing" constant="20" id="Upl-98-aTS"/>
+                                    <constraint firstAttribute="bottom" secondItem="FQr-Ra-eRI" secondAttribute="bottom" constant="20" id="z0g-dU-lOe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pKf-qD-bSj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LS9-eJ-uni"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pKf-qD-bSj" secondAttribute="bottom" id="Uhm-75-ZXc"/>
+                            <constraint firstItem="tOR-YJ-ZLU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ZpN-cn-Sot"/>
+                            <constraint firstItem="pKf-qD-bSj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lVB-pM-T7n"/>
+                            <constraint firstItem="tOR-YJ-ZLU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="o3O-k5-IiN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tOR-YJ-ZLU" secondAttribute="trailing" id="uVX-Wn-uoy"/>
+                            <constraint firstItem="pKf-qD-bSj" firstAttribute="top" secondItem="tOR-YJ-ZLU" secondAttribute="bottom" id="xzL-6d-tfB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="S47-z2-u76" id="baW-aQ-MG1"/>
+                        <outlet property="startPauseBtn" destination="ju0-se-KfS" id="q1h-lx-62S"/>
+                        <outlet property="stopBtn" destination="VMI-og-aaC" id="5R7-MN-K2Q"/>
+                        <outlet property="timeLbl" destination="QfU-NH-bCi" id="sEA-CM-iFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <image name="stop.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

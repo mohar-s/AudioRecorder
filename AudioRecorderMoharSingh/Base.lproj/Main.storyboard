@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="11j-mk-vS8">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hel-zU-3gv">
+            <objects>
+                <navigationController id="11j-mk-vS8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bUl-LJ-mTb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BM7-T1-9q0" kind="relationship" relationship="rootViewController" id="iMw-rf-F32"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaW-rG-Tbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168" y="-204"/>
+        </scene>
+        <!--Recording ListVC-->
+        <scene sceneID="Q3N-Rc-lax">
+            <objects>
+                <viewController id="BM7-T1-9q0" customClass="RecordingListVC" customModule="AudioRecorderMoharSingh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hzR-B9-gL2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have previous record , Click on below &quot;Create new&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-b6-hCH">
+                                <rect key="frame" x="46.666666666666657" y="435.66666666666669" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="66K-Q1-jBw"/>
+                                    <constraint firstAttribute="height" constant="50" id="ptB-tT-eYA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="snh-WP-egi">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecordingTableCellIdentifier" rowHeight="60" id="Obq-eX-yUS" customClass="RecordingTableCell" customModule="AudioRecorderMoharSingh" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Obq-eX-yUS" id="ndW-rZ-8BM">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMz-rq-Zh6">
+                                                    <rect key="frame" x="16" y="5" width="329.66666666666669" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYd-pj-3cf">
+                                                            <rect key="frame" x="8" y="8" width="301.66666666666669" height="34"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YYd-pj-3cf" firstAttribute="leading" secondItem="hMz-rq-Zh6" secondAttribute="leading" constant="8" id="D4z-pT-wOF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YYd-pj-3cf" secondAttribute="bottom" constant="8" id="cLZ-Lv-axQ"/>
+                                                        <constraint firstItem="YYd-pj-3cf" firstAttribute="top" secondItem="hMz-rq-Zh6" secondAttribute="top" constant="8" id="crE-al-4AC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YYd-pj-3cf" secondAttribute="trailing" constant="20" id="meL-9m-JIV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hMz-rq-Zh6" firstAttribute="leading" secondItem="ndW-rZ-8BM" secondAttribute="leading" constant="16" id="EzB-dr-vsc"/>
+                                                <constraint firstAttribute="trailing" secondItem="hMz-rq-Zh6" secondAttribute="trailing" constant="17" id="IY1-9l-hJk"/>
+                                                <constraint firstItem="hMz-rq-Zh6" firstAttribute="top" secondItem="ndW-rZ-8BM" secondAttribute="top" constant="5" id="J3S-0W-hNo"/>
+                                                <constraint firstAttribute="bottom" secondItem="hMz-rq-Zh6" secondAttribute="bottom" constant="5" id="xOP-PA-D5g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="YYd-pj-3cf" id="qIH-SZ-YAL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BM7-T1-9q0" id="Yzz-ZG-5tk"/>
+                                    <outlet property="delegate" destination="BM7-T1-9q0" id="h5u-0B-zMR"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l97-RL-4Yq">
+                                <rect key="frame" x="8" y="750" width="377" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkl-NI-qmn">
+                                        <rect key="frame" x="113.66666666666669" y="19" width="150" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="6Ft-Gz-n6X"/>
+                                            <constraint firstAttribute="height" constant="22" id="b7k-jT-XSJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Record New" image="waveform" catalog="system">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startNewrecordingBtnAction:" destination="BM7-T1-9q0" eventType="touchUpInside" id="sKE-uA-der"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="An2-eY-F3w"/>
+                                    <constraint firstItem="Xkl-NI-qmn" firstAttribute="centerX" secondItem="l97-RL-4Yq" secondAttribute="centerX" id="Rfe-2G-4Lg"/>
+                                    <constraint firstItem="Xkl-NI-qmn" firstAttribute="centerY" secondItem="l97-RL-4Yq" secondAttribute="centerY" id="VgJ-sz-P39"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kuM-qH-YZA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FcO-b6-hCH" firstAttribute="centerY" secondItem="kuM-qH-YZA" secondAttribute="centerY" id="2pV-UV-owW"/>
+                            <constraint firstItem="snh-WP-egi" firstAttribute="leading" secondItem="kuM-qH-YZA" secondAttribute="leading" id="6UZ-de-ubz"/>
+                            <constraint firstItem="kuM-qH-YZA" firstAttribute="trailing" secondItem="l97-RL-4Yq" secondAttribute="trailing" constant="8" id="84i-NR-FnQ"/>
+                            <constraint firstItem="snh-WP-egi" firstAttribute="top" secondItem="kuM-qH-YZA" secondAttribute="top" id="Mcg-hl-yNF"/>
+                            <constraint firstItem="kuM-qH-YZA" firstAttribute="bottom" secondItem="l97-RL-4Yq" secondAttribute="bottom" constant="8" id="T26-tg-Rk7"/>
+                            <constraint firstItem="l97-RL-4Yq" firstAttribute="leading" secondItem="kuM-qH-YZA" secondAttribute="leading" constant="8" id="jtf-Ky-Wxz"/>
+                            <constraint firstItem="snh-WP-egi" firstAttribute="trailing" secondItem="kuM-qH-YZA" secondAttribute="trailing" id="nAa-Pq-KYc"/>
+                            <constraint firstItem="kuM-qH-YZA" firstAttribute="bottom" secondItem="snh-WP-egi" secondAttribute="bottom" id="py8-A9-4wp"/>
+                            <constraint firstItem="FcO-b6-hCH" firstAttribute="centerX" secondItem="kuM-qH-YZA" secondAttribute="centerX" id="wZe-aN-Svn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cuP-rq-ROe"/>
+                    <connections>
+                        <outlet property="emptyLbl" destination="FcO-b6-hCH" id="9lK-ll-dLF"/>
+                        <outlet property="recordingView" destination="l97-RL-4Yq" id="KIf-JX-aqb"/>
+                        <outlet property="tableView" destination="snh-WP-egi" id="4jW-QF-bWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V09-83-pm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270.99236641221376" y="-205.63380281690141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="waveform" catalog="system" width="125" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
